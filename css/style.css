@@ -1,0 +1,94 @@
+/* zerar configurações iniciais dos elementos */
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body{
+    /* background-color: #555;  */
+    /* background-color: #000; */ /* efeito matrix */
+    /* background-image: radial-gradient(circle, red, yellow, green); */
+    /* background-image: repeating-radial-gradient(pink, white 10%, black 15%); */
+    /* background-image: url('../images/loading_small.png'); */
+    text-align: center;
+    padding: 100px 0 0 0;
+    color: #fff;
+    background: #1d1f20;
+}
+
+/* id da imagem */
+#loading {
+    -webkit-animation: rotation 2s infinite linear;
+}
+
+/* Fazer com que a imagem fique rodando infinito */
+@-webkit-keyframes rotation {
+    from {
+            -webkit-transform: rotate(0deg);
+    }
+    to {
+            -webkit-transform: rotate(359deg);
+    }
+}
+
+
+/* aspectos visuais */
+.panel{
+    width: 305px;
+    height: 305px;
+    /*border-radius: 10px; /* arrendondar borda */
+    /* border-radius: 200px; /* efeito matrix */
+    border-radius: 200px;
+}
+
+/* tela inicial do jogo */
+.modal{
+    position: absolute;
+    transition: all 0.5s;  /*característica de transição que leva meio segundo*/
+}
+
+/* setar imagem a tela inicial */
+#startScreen{
+    background: url('../images/intro.png');
+    opacity: 1; /*recebendo valor 1 pra ser mudado ao final do jogo*/
+    z-index: 1; /*recebendo valor 1 pra ser mudado ao final do jogo*/
+}
+
+
+/* tela de fim de jogo */
+#overScreen{
+    background: url('../images/win.png');
+    opacity: 0; /*recebendo valor 0 pra começar jogo invísivel*/
+    z-index: -1; /*recebendo valor -1 pra vim pra frente quando finalizar jogo*/
+}
+
+/* tabuleiro */
+#container{
+    position: relative;
+    margin: 50px auto;
+    /* background-color: #ccc; */
+    /* background-color: #000; */ /* efeito matrix */
+    background-color: #000;
+    /*border: outset; /* outset -> projeta elemento pra fora. Auto relevo -> #0f0 50px*/
+    border: outset #0f0;
+    /*border: outset #0f0; /* efeito matrix */
+    /*box-shadow: px 2px 5px rgba(0, 0, 0, 0.5); /* sombra pros elementos */
+    /*box-shadow: 2px 2px 50px rgba(0, 255, 0, 0.5); /* efeito matrix */
+    box-shadow: 2px 2px 50px rgba(0, 255, 0, 0.5);
+}
+
+/* peças do jogo */
+.tile{
+    width: 90px;
+    height: 90px;
+    position: absolute;
+    /*background-color: #fff;*/ /* cor do elemento */
+    transition: left 0.5s, top 0.5s; /* transição vai ser suavizada quando houver transição dos elementos à esquerda e topo */
+}
+
+/* animação ao passar mouse em cima do elemento */
+.tile:hover{
+    border: inset; /* oposto ao outset -> sensação de baixo relevo */
+    border-radius: 10px;
+}

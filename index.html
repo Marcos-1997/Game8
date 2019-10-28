@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Jogo do 8 </title>
+    
+    <!--  referência ao arquivo css -->
+    <link rel="stylesheet" href="css/style.css"> 
+</head>
+
+
+<body>
+    <img id="loading" src="http://www.vitorazevedo.net/external_files/loading_small.png" alt="" srcset="">
+    <div id="container" class="panel"> <!-- panel -> classe que vai receber aspectos visuais -->
+        <!--  tabuleiro do jogo -->    
+        <div id="n1" class="tile" data-value="1"></div> <!--  peças do jogo. Data-value recebe valor criado setado por mim... -->
+        <div id="n2" class="tile" data-value="2"></div>
+        <div id="n3" class="tile" data-value="3"></div>
+        <div id="n4" class="tile" data-value="4"></div>
+        <div id="n5" class="tile" data-value="5"></div>
+        <div id="n6" class="tile" data-value="6"></div>
+        <div id="n7" class="tile" data-value="7"></div>
+        <div id="n8" class="tile" data-value="8"></div>
+
+        <!-- Tela inicial do jogo -->
+        <div id="startScreen" class="panel modal"></div>
+
+        <!-- Tela fim de jogo -->
+        <div id="overScreen" class="panel modal"></div>
+    </div>
+
+    <!-- referência ao arquivo js. Tá embaixo porque é referenciado -->
+    <script src="js/script.js"></script> 
+</body>
+
+</html>
