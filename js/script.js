@@ -93,10 +93,14 @@
 
     // função que inicia o jogo
     function startGame(){
-        setTimeout(function(){
-            alert('Você não conseguiu resolver...');
-            gameOver();
-        }, 10000);
+        setTimeout(function(){ // contando o tempo...
+            if (chWin()){ // se as peças estiverem alinhadas, jogo termina
+                gameOver();
+            } else { // 1 minuto pra resolver o jogo
+                alert('Você não conseguiu resolver...');
+                gameOver();
+            }
+        }, 50000); // 1 minuto pra resolver o jogo -> 1000 - 1 segundo
 
         // embaralhar as peças. A função recebe o array em ordem, e retorna o array embaralhado pra variável
         tiles = randomSort(tiles);  
@@ -148,9 +152,7 @@
         render();
         
         // verificar se, após peça ser movimentada, o meu array está em ordem
-        if(chWin()){
-            gameOver();
-        }
+        if(chWin()){ gameOver(); }
     }
 
 
@@ -171,7 +173,7 @@
 
     // função de fim de jogo
     function gameOver(){
-        overScreen.style.opacity = "1"; // torna o elemento de fim de jogo, visível
+        overScreen.style.opacity = "0.85"; // torna o elemento de fim de jogo, visível
         overScreen.style.zIndex = "1";
         
         setTimeout(function(){ // como o modal tem transição de 0.5s, o função espera meio segundo também

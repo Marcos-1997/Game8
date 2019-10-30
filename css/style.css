@@ -50,7 +50,7 @@ h1{
 /* setar imagem a tela inicial */
 #startScreen{
     background-image: url('../images/intro.png') ;
-    opacity: 1; /*recebendo valor 1 pra ser mudado ao final do jogo*/
+    opacity: 0.85; /*recebendo valor 1 pra ser mudado ao final do jogo*/
     z-index: 1; /*recebendo valor 1 pra ser mudado ao final do jogo*/
 }
 
@@ -58,7 +58,7 @@ h1{
 /* tela de fim de jogo */
 #overScreen{
     background: url('../images/win.png');
-    opacity: 0; /*recebendo valor 0 pra começar jogo invísivel*/
+    opacity: 0.85; /*recebendo valor 0 pra começar jogo invísivel*/
     z-index: -1; /*recebendo valor -1 pra vim pra frente quando finalizar jogo*/
 }
 
