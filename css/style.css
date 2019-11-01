@@ -25,16 +25,9 @@ a{
 }
 
 /* texto  */
-#textoTutorial { 
+.textoTutorial { 
     text-align: center;
-    padding-top: 40px;
-    font: 30px Helvetica;
-}
-
-/* texto */
-#textoTutorial2 { 
-    text-align: center;
-    padding-top: 40px;
+    padding-top: 20px;
     font: 30px Helvetica;
 }
 
@@ -51,8 +44,17 @@ h2{
     font: 40px Helvetica, sans-serif;
     font-weight: bold;
     font-style: italic;
-    margin-top: 200px;
+    margin-top: 150px;
     margin-bottom: 100px;
+}
+
+/* sub-título */
+h3{
+    font: 40px Helvetica, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 50px;
+    margin-bottom: 50px;
 }
 
 /* id da imagem */
@@ -121,7 +123,7 @@ h2{
     border-radius: 50px;
 }
 
-#desenvolvedor{ text-align: center; color: white; padding-top: 50px; }
+/* #desenvolvedor{ text-align: center; color: white; padding-top: 50px; } */
 
 footer{
     margin-top: 100px;

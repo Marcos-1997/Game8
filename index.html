@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="pt-BR">
 
 <head>
@@ -9,9 +9,14 @@
 
     <!--  referência ao arquivo css -->
     <link rel="stylesheet" href="css/style.css">
-    <script> 
-        function esconde(){
-            $('.esconde').hide();    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        function clickme() {
+            $(document).ready(function () {
+                $("#devFuncao").click(function () {
+                    $("#dev").toggle();
+                });
+            });
         }
     </script>
 </head>
@@ -23,16 +28,17 @@
         <h3>
             <p align="center">
                 <a href="#tutorial"> Jogo </a>
-                <a href="#desenvolvedor" onclick="esconde()"> Desenvolvedor </a>
+                <a id="devFuncao" onclick="clickme()"> Desenvolvedor </a>
             </p>
         </h3>
     </nav>
 
     <h1 id="tutorial"> Como Jogar </h1>
-    <p id="textoTutorial"> Basta alinhar os números de 1 a 8... </p>
-    <p id="textoTutorial2"> Você tem apenas 50 segundos!  </p>
+    <p class="textoTutorial"> Basta alinhar os números de 1 a 8... </p>
+    <p class="textoTutorial"> Você tem apenas 50 segundos! </p>
 
-    <h2>  50 Seconds </h2>
+
+    <h2> 50 Seconds </h2>
     <!-- <img id="loading" src="images/loading_small.png" alt="Imagem Rotativa"> -->
     <div id="container" class="panel">
         <!-- panel -> classe que vai receber aspectos visuais -->
@@ -57,9 +63,10 @@
     <!-- referência ao arquivo js. Tá embaixo porque é referenciado -->
     <script src="js/script.js"></script>
 
-    <footer id="desenvolvedor">
-        <h3 class="esconde"> Desenvolvedor:</h3>
-        <p  class="esconde"> <b> Marcos Allysson</b> </p>
+    <footer id="dev">
+        <h3> Desenvolvedor:</h3>
+        <p class="textoTutorial"> <b> Marcos Allysson </b> </p>
+        <p class="textoTutorial"> <b> TSIV 4 </b> </p>
     </footer>
 </body>
 
