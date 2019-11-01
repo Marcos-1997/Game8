@@ -1,9 +1,6 @@
 /* zerar configurações iniciais dos elementos */
-*{
-    margin: 0; 
-    padding: 0;
-    border: 0;
-}
+/* zerando valores */
+*{ margin: 0; padding: 0; border: 0; }
 
 body{
     text-align: center;
@@ -12,11 +9,50 @@ body{
     background: #1d1f20;
 }
 
+/* navegação */
+nav{
+    background-color: #344955;
+    width: 100%;
+    height: 50px;
+}
+
+/* links */
+a{  
+    text-decoration: none;
+    padding-left: 35px;
+    color: white;
+    font: 50px;
+}
+
+/* texto  */
+#textoTutorial { 
+    text-align: center;
+    padding-top: 40px;
+    font: 30px Helvetica;
+}
+
+/* texto */
+#textoTutorial2 { 
+    text-align: center;
+    padding-top: 40px;
+    font: 30px Helvetica;
+}
+
 /* título */
 h1{
     font: 40px Helvetica, sans-serif;
     font-weight: bold;
     font-style: italic;
+    margin-top: 60px;
+}
+
+/* sub-título */
+h2{
+    font: 40px Helvetica, sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 200px;
+    margin-bottom: 100px;
 }
 
 /* id da imagem */
@@ -48,17 +84,17 @@ h1{
 }
 
 /* setar imagem a tela inicial */
-#startScreen{
+#telaInicial{
     background-image: url('../images/intro.png') ;
-    opacity: 0.85; /*recebendo valor 1 pra ser mudado ao final do jogo*/
+    opacity: 0.70; /*recebendo valor 1 pra ser mudado ao final do jogo*/
     z-index: 1; /*recebendo valor 1 pra ser mudado ao final do jogo*/
 }
 
 
 /* tela de fim de jogo */
-#overScreen{
+#telaFinal{
     background: url('../images/win.png');
-    opacity: 0.85; /*recebendo valor 0 pra começar jogo invísivel*/
+    opacity: 0; /*recebendo valor 0 pra começar jogo invísivel*/
     z-index: -1; /*recebendo valor -1 pra vim pra frente quando finalizar jogo*/
 }
 
@@ -72,15 +108,26 @@ h1{
 }
 
 /* peças do jogo */
-.tile{
-    width: 90px;
+.peca{
+    width: 90px; 
     height: 90px;
     position: absolute;
     transition: left 0.5s, top 0.5s; /* transição vai ser suavizada quando houver transição dos elementos à esquerda e topo */
 }
 
 /* animação ao passar mouse em cima do elemento */
-.tile:hover{
+.peca:hover{
     border: inset; /* oposto ao outset -> sensação de baixo relevo */
     border-radius: 50px;
+}
+
+#desenvolvedor{ text-align: center; color: white; padding-top: 50px; }
+
+footer{
+    margin-top: 100px;
+    background-color: #344955;
+    width: 100%;
+    height: 200px;
+    clear: both;
+    display: block;
 }

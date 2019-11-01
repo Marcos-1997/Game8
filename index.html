@@ -1,39 +1,66 @@
-<!DOCTYPE html>  
+<!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title> Jogo do 8 </title>
-    
+
     <!--  referência ao arquivo css -->
-    <link rel="stylesheet" href="css/style.css"> 
+    <link rel="stylesheet" href="css/style.css">
+    <script> 
+        function esconde(){
+            $('.esconde').hide();    
+        }
+    </script>
 </head>
 
 
 <body>
-    <h1> " 8 GAME " </h1>
-    <img id="loading" src="images/loading_small.png" alt="Imagem Rotativa">
-    <div id="container" class="panel"> <!-- panel -> classe que vai receber aspectos visuais -->
-        <!--  tabuleiro do jogo -->    
-        <div id="n1" class="tile" data-value="1"></div> <!--  peças do jogo. Data-value recebe valor criado setado por mim... -->
-        <div id="n2" class="tile" data-value="2"></div>
-        <div id="n3" class="tile" data-value="3"></div>
-        <div id="n4" class="tile" data-value="4"></div>
-        <div id="n5" class="tile" data-value="5"></div>
-        <div id="n6" class="tile" data-value="6"></div>
-        <div id="n7" class="tile" data-value="7"></div>
-        <div id="n8" class="tile" data-value="8"></div>
+    <img src="images/javascript.png" width="1350px" height="300px" alt="Main Samba Image">
+    <nav>
+        <h3>
+            <p align="center">
+                <a href="#tutorial"> Jogo </a>
+                <a href="#desenvolvedor" onclick="esconde()"> Desenvolvedor </a>
+            </p>
+        </h3>
+    </nav>
+
+    <h1 id="tutorial"> Como Jogar </h1>
+    <p id="textoTutorial"> Basta alinhar os números de 1 a 8... </p>
+    <p id="textoTutorial2"> Você tem apenas 50 segundos!  </p>
+
+    <h2>  50 Seconds </h2>
+    <!-- <img id="loading" src="images/loading_small.png" alt="Imagem Rotativa"> -->
+    <div id="container" class="panel">
+        <!-- panel -> classe que vai receber aspectos visuais -->
+        <!--  tabuleiro do jogo -->
+        <div id="n1" class="peca" data-value="1"></div>
+        <!--  peças do jogo. Data-value recebe valor criado setado por mim... -->
+        <div id="n2" class="peca" data-value="2"></div>
+        <div id="n3" class="peca" data-value="3"></div>
+        <div id="n4" class="peca" data-value="4"></div>
+        <div id="n5" class="peca" data-value="5"></div>
+        <div id="n6" class="peca" data-value="6"></div>
+        <div id="n7" class="peca" data-value="7"></div>
+        <div id="n8" class="peca" data-value="8"></div>
 
         <!-- Tela inicial do jogo -->
-        <div id="startScreen" class="panel modal"></div>
+        <div id="telaInicial" class="panel modal"></div>
 
         <!-- Tela fim de jogo -->
-        <div id="overScreen" class="panel modal"></div>
+        <div id="telaFinal" class="panel modal"></div>
     </div>
 
     <!-- referência ao arquivo js. Tá embaixo porque é referenciado -->
-    <script src="js/script.js"></script> 
+    <script src="js/script.js"></script>
+
+    <footer id="desenvolvedor">
+        <h3 class="esconde"> Desenvolvedor:</h3>
+        <p  class="esconde"> <b> Marcos Allysson</b> </p>
+    </footer>
 </body>
 
 </html>
